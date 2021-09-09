@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "header"
+        "body";
+}
+
+
+.container-header {
+    grid-area: header;
+    justify-self: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.container-header h1 {
+    margin: 0;
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+
+.container-header h1:first-of-type {
+    font-weight: 200;
+}
+
+.container-header p {
+    font-weight: 200;
+    font-size: 15px;
+    color: hsl(229, 6%, 66%);
+    padding: 0 330px;
+}
+
+.container-body {
+    grid-area: body;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". . a2 . ."
+        ". a1 . a4 ."
+        ". . a3 . .";
+    transform: translateY(-100px);
+}
+
+article {
+    text-align: left;
+    height: 300px;
+    position: relative;
+    box-shadow: 0px 10px 20px hsl(229, 6%, 66%);
+    border-radius: 5px;
+    padding: 0 30px;
+}
+
+
+article img {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+
+article p {
+    font-weight: 200;
+    font-size: 15px;
+    color: hsl(229, 6%, 66%);
+}
+
+.article-1 {
+    grid-area: a1;
+    border-top: 5px solid hsl(180, 62%, 55%);
+    margin-right: 20px;
+}
+
+.article-2 {
+    grid-area: a2;
+    border-top: 5px solid hsl(0, 78%, 62%);
+    transform: translateY(50%);
+    margin-bottom: 20px;
+}
+
+
+
+.article-3 {
+    grid-area: a3;
+    border-top: 5px solid hsl(34, 97%, 64%);
+    transform: translateY(-50%);
+
+}
+
+.article-4 {
+    grid-area: a4;
+    border-top: 5px solid hsl(212, 86%, 64%);
+    margin-left: 20px;
+
+}
